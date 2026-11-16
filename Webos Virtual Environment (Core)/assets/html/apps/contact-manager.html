@@ -1,0 +1,18 @@
+<div id="contact-window" role="application" aria-label="Contact">
+  <div class="contact-titlebar"><span class="contact-title-mark">C</span><span class="contact-title-name">Contact Manager <span class="contact-title-sub">ÚJ KONTAKTOK RÖGZÍTÉSE</span></span><button id="contact-minimize" type="button" aria-label="Kis méret">_</button><button id="contact-close" type="button" aria-label="Bezárás">×</button></div>
+  <div class="contact-toolbar"><span class="contact-toolbar-label">KONTAKTARCHÍVUM</span><button class="contact-btn" id="contact-search-toggle" type="button">⌕ Keresés</button><button class="contact-btn" id="contact-new" type="button">＋ Új kontakt</button><button class="contact-btn primary" id="contact-save-top" type="button">Mentés</button><button class="contact-btn" id="contact-refresh" type="button">↻ Frissítés</button></div>
+  <div class="contact-content">
+    <section class="contact-panel"><div class="contact-panel-head"><strong>KONTAKTOK</strong><span class="contact-total" id="contact-count">0 személy</span></div><div class="contact-list" id="contact-list"><div class="contact-empty">A kontaktarchívum betöltése folyamatban.</div></div></section>
+    <section class="contact-panel"><div class="contact-editor-head"><span class="contact-editor-title" id="contact-editor-title">Új kontakt</span></div>
+      <form class="contact-form" id="contact-form" autocomplete="off">
+        <div class="contact-field"><label for="contact-name">Név</label><input id="contact-name" name="name" type="text" maxlength="120" placeholder="Teljes név" autocomplete="name"></div>
+        <div class="contact-field"><label for="contact-title">Titulus</label><input id="contact-title" name="title" type="text" maxlength="120" placeholder="Beosztás, titulus vagy szerepkör"></div>
+        <div class="contact-field"><label for="contact-phone">Telefonszám</label><input id="contact-phone" name="phone" type="tel" maxlength="50" placeholder="+36 …" autocomplete="tel"></div>
+        <div class="contact-field"><label for="contact-email">E-mail cím</label><input id="contact-email" name="email" type="email" maxlength="254" placeholder="nev@pelda.hu" autocomplete="email"></div>
+        <div class="contact-form-actions"><button class="contact-btn primary" id="contact-save" type="submit">Mentés</button><button class="contact-btn" id="contact-cancel" type="button">Mégse</button></div>
+      </form>
+    </section>
+    <div id="contact-disconnected" hidden><div class="contact-connect-card"><div class="contact-connect-icon">▣</div><strong>Contact</strong><button class="contact-btn primary" id="contact-connect" type="button">Csatlakozás</button></div></div>
+  </div>
+  <div class="contact-storage-line"><span id="contact-status">Nincs csatlakoztatott tárhely.</span><span class="contact-storage-path">Content\Contact · JSON</span></div>
+</div>

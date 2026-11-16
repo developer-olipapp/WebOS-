@@ -1,0 +1,20 @@
+{
+  "parts": [
+    "./assets/js/runtime/01-shell-and-window-system.js",
+    "./assets/js/runtime/02-filesystem-and-handle-storage.js",
+    "./assets/js/runtime/03-file-manager-operations.js",
+    "./assets/js/runtime/04-event-folders-and-records.js",
+    "./assets/js/runtime/05-event-forms-and-calendar.js",
+    "./assets/js/runtime/06-contact-manager-core.js",
+    "./assets/js/runtime/07-contact-search-and-profiles.js",
+    "./assets/js/runtime/08-dock-and-clock.js",
+    "./assets/js/runtime/09-event-pdf-and-export.js",
+    "./assets/js/runtime/10-startup-gate-and-mti-launch.js",
+    "./assets/js/runtime/11-mti-converter.js",
+    "./assets/js/runtime/12-utility-windows-and-recycle-bin.js",
+    "./assets/js/runtime/13-global-search-and-pdf-preview.js",
+    "./assets/js/runtime/14-final-initializers.js"
+  ],
+  "scope": "shared-lexical-iife",
+  "note": "A bootstrap állítja össze a részeket, mert a funkciók közös állapotot használnak."
+}

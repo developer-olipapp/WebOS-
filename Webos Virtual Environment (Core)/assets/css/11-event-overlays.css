@@ -1,0 +1,46 @@
+/* Event editor, details and calendar overlays. */
+.event-entry-window, .event-detail-window, .event-calendar-window {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 42px);
+  overflow: hidden;
+  border: 1px solid rgba(139,207,255,.3);
+  border-radius: 20px;
+  color: var(--text);
+  background: linear-gradient(145deg, rgba(13,27,50,.98), rgba(6,15,32,.98));
+  box-shadow: 0 28px 85px rgba(0,0,0,.68), 0 0 35px rgba(62,187,235,.14);
+}
+.event-entry-window { width: min(900px, calc(100vw - 28px)); }
+.event-detail-window { width: min(790px, calc(100vw - 28px)); }
+.event-calendar-window { width: min(430px, calc(100vw - 28px)); padding-bottom: 13px; }
+.event-entry-folder-note { padding: 11px 15px; border-bottom: 1px solid rgba(145,206,255,.14); color: var(--cyan-soft); background: rgba(20,46,74,.65); font: 10px var(--font-mono); }
+.event-entry-form { display: flex; flex-direction: column; gap: 14px; overflow: auto; padding: 18px; }
+.event-form-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+.event-form-field { display: flex; flex-direction: column; gap: 7px; min-width: 0; color: var(--text-soft); font-size: 11px; font-weight: 700; }
+.event-form-field.full { grid-column: 1 / -1; }
+.event-form-field input, .event-form-field select, .event-form-field textarea { width: 100%; min-height: 40px; padding: 9px 11px; }
+.event-form-field textarea { height: 150px; resize: vertical; line-height: 1.5; }
+.event-form-field.contact textarea { height: 105px; }
+.event-form-field input[name="time"] { font-family: var(--font-mono); }
+.event-entry-actions { display: flex; align-items: center; gap: 10px; padding-top: 13px; border-top: 1px solid rgba(145,206,255,.14); }
+.event-entry-folder-hint { flex: 1; color: var(--muted); font-size: 10px; line-height: 1.45; }
+.event-entry-message { color: #ff9eac; font-size: 11px; }
+.event-entry-submit { min-width: 140px; }
+.event-detail-body { overflow: auto; padding: 15px 18px; background: rgba(4,13,28,.5); }
+.event-detail-row { display: grid; grid-template-columns: 135px minmax(0,1fr) auto; align-items: start; gap: 11px; padding: 11px 5px; border-bottom: 1px solid rgba(145,206,255,.12); }
+.event-detail-label { padding-top: 3px; color: var(--muted); font-size: 10px; font-weight: 750; }
+.event-detail-value { min-width: 0; color: var(--text); font-size: 12px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+.event-copy-button { min-width: 78px; min-height: 30px; padding: 5px 9px; }
+.event-detail-footer { display: flex; justify-content: flex-end; gap: 8px; padding: 12px 16px; border-top: 1px solid rgba(145,206,255,.14); background: rgba(15,31,54,.8); }
+.event-calendar-nav { display: flex; align-items: center; justify-content: space-between; height: 49px; padding: 6px 14px; border-bottom: 1px solid rgba(145,206,255,.14); background: rgba(22,45,72,.66); }
+.event-calendar-nav button { width: 36px; height: 33px; border: 1px solid rgba(145,207,255,.2); border-radius: 9px; color: var(--cyan); background: rgba(9,20,41,.72); font-weight: 800; cursor: pointer; }
+.event-calendar-month { color: #effaff; font-size: 13px; font-weight: 750; }
+.event-calendar-weekdays, .event-calendar-grid { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); gap: 5px; padding: 10px 12px 0; }
+.event-calendar-weekdays span { padding: 4px 0; color: var(--muted); text-align: center; font: 700 9px var(--font-mono); }
+.event-calendar-grid { padding-top: 7px; }
+.event-calendar-day { height: 39px; border: 1px solid rgba(138,198,241,.14); border-radius: 9px; color: var(--text-soft); background: rgba(20,42,69,.58); cursor: pointer; transition: background .15s ease, border-color .15s ease; }
+.event-calendar-day:hover { border-color: rgba(98,239,255,.54); background: rgba(48,123,157,.35); }
+.event-calendar-day.other { color: var(--muted-2); background: rgba(8,18,34,.45); }
+.event-calendar-day.today { border-color: var(--cyan); color: #fff; box-shadow: inset 0 0 0 1px rgba(98,239,255,.2); }
+.event-calendar-day:active { background: rgba(61,145,174,.55); }
+.event-calendar-hint { padding: 10px 12px 0; color: var(--muted); text-align: center; font-size: 10px; }

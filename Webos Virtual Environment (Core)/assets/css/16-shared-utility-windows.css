@@ -1,0 +1,88 @@
+/* ================================================================
+   WEBOS — SHARED UTILITY WINDOWS
+   Global Search, Recycle Bin, and native browser PDF preview.
+   Existing application styles intact.
+   ================================================================ */
+.aero-utility-window {
+  position: fixed !important;
+  left: 50% !important;
+  top: calc((100vh - 78px) / 2) !important;
+  right: auto !important;
+  bottom: auto !important;
+  display: none;
+  flex-direction: column;
+  width: min(960px, calc(100vw - 28px));
+  height: min(740px, calc(100vh - 104px));
+  min-width: 0;
+  min-height: 0;
+  max-width: calc(100vw - 24px);
+  max-height: calc(100vh - 96px);
+  margin: 0 !important;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  z-index: 10010;
+}
+.aero-utility-window.open { display: flex !important; animation: aero-window-open .38s cubic-bezier(.17,.82,.22,1) both; }
+.aero-utility-window.app-minimized { display: none !important; }
+.aero-utility-window.closing { display: flex !important; pointer-events: none !important; animation: aero-window-close .24s ease both !important; }
+.aero-tool-titlebar {
+  display: flex; align-items: center; gap: 10px; flex: 0 0 49px; min-height: 49px;
+  padding: 0 14px; color: #f5fbff;
+  border-bottom: 1px solid rgba(131,205,255,.24);
+  background: linear-gradient(105deg, rgba(24,53,83,.98), rgba(18,36,69,.97) 52%, rgba(41,32,81,.94));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.11), 0 6px 22px rgba(0,0,0,.12);
+}
+.aero-tool-title-mark {
+  width: 30px; height: 30px; flex: 0 0 30px; display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(145,225,255,.35); border-radius: 9px; color: var(--cyan-soft);
+  background: linear-gradient(145deg, rgba(74,173,206,.24), rgba(125,103,207,.24)); font-size: 16px;
+}
+.aero-tool-title { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 750; letter-spacing: .025em; }
+.aero-tool-subtitle { margin-left: 8px; color: #a9cbe6; font: 600 9px var(--font-mono); letter-spacing: .12em; }
+.aero-tool-titlebar button {
+  width: 31px; height: 29px; flex: 0 0 31px; padding: 0; border: 1px solid rgba(170,215,248,.24);
+  border-radius: 9px; color: #d7ebfc; background: rgba(7,18,38,.58); font: 650 17px/1 var(--font-ui); cursor: pointer;
+}
+.aero-tool-titlebar button:hover { color: #fff; border-color: rgba(98,239,255,.65); background: rgba(53,131,166,.48); }
+.aero-tool-body { display: flex; flex: 1; flex-direction: column; min-height: 0; gap: 12px; padding: 14px; overflow: hidden; background: linear-gradient(145deg, rgba(7,17,34,.82), rgba(13,28,51,.72)); }
+.aero-tool-toolbar { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; flex: 0 0 auto; }
+.aero-tool-toolbar input, .aero-tool-toolbar select { min-height: 38px; padding: 8px 11px; }
+.aero-tool-toolbar input { flex: 1 1 240px; min-width: 130px; }
+.aero-tool-toolbar select { min-width: 145px; }
+.aero-tool-toolbar .fm-btn { min-height: 37px; }
+.activity-page-label { color: var(--cyan-soft); font: 9px var(--font-mono); white-space: nowrap; }
+
+.aero-tool-status { min-height: 20px; flex: 0 0 auto; color: var(--muted); font: 10px/1.5 var(--font-mono); }
+.aero-tool-list { flex: 1; min-height: 0; overflow: auto; padding: 3px; border: 1px solid rgba(132,195,239,.17); border-radius: 14px; background: rgba(4,13,28,.42); }
+.aero-tool-empty { padding: 34px 20px; color: var(--muted); text-align: center; font-size: 12px; }
+.aero-search-result, .aero-log-entry, .aero-recycle-entry {
+  display: flex; align-items: center; gap: 11px; padding: 11px 12px; border-bottom: 1px solid rgba(145,206,255,.1); color: var(--text-soft);
+}
+.aero-search-result:last-child, .aero-log-entry:last-child, .aero-recycle-entry:last-child { border-bottom: 0; }
+.aero-search-result { width: 100%; border: 0; border-bottom: 1px solid rgba(145,206,255,.1); border-radius: 0; background: transparent; text-align: left; cursor: pointer; }
+.aero-search-result:hover { background: rgba(58,143,181,.17); }
+.aero-result-icon { width: 34px; height: 34px; flex: 0 0 34px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(124,210,255,.23); border-radius: 10px; color: var(--cyan-soft); background: rgba(44,117,155,.24); font-size: 17px; }
+.aero-result-copy, .aero-entry-copy { display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 3px; }
+.aero-result-name, .aero-entry-name { color: #f0f8ff; font-size: 12px; font-weight: 700; overflow-wrap: anywhere; }
+.aero-result-detail, .aero-entry-detail { color: var(--muted); font-size: 10px; line-height: 1.45; overflow-wrap: anywhere; }
+.aero-result-kind { flex: 0 0 auto; color: var(--cyan-soft); font: 9px var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+.aero-log-entry { align-items: flex-start; }
+.aero-log-time { flex: 0 0 145px; color: #9db6d0; font: 10px/1.5 var(--font-mono); }
+.aero-log-action { flex: 0 0 145px; color: var(--cyan-soft); font: 10px/1.5 var(--font-mono); overflow-wrap: anywhere; }
+.aero-log-detail { flex: 1; min-width: 0; color: var(--text-soft); font-size: 11px; overflow-wrap: anywhere; }
+.aero-log-entry.error .aero-log-action { color: #ff9eae; }
+.aero-log-entry.success .aero-log-action { color: var(--mint); }
+.aero-entry-actions { display: flex; flex: 0 0 auto; gap: 6px; flex-wrap: wrap; }
+.aero-entry-actions .fm-btn { min-height: 31px; padding: 5px 9px; }
+.aero-entry-badge { flex: 0 0 auto; min-width: 54px; padding: 5px 7px; border: 1px solid rgba(98,239,255,.2); border-radius: 8px; color: var(--cyan-soft); background: rgba(39,105,139,.17); text-align: center; font: 9px var(--font-mono); }
+#global-search-window { width: min(1000px, calc(100vw - 28px)); height: min(760px, calc(100vh - 104px)); }
+#recycle-bin-window { width: min(940px, calc(100vw - 28px)); height: min(700px, calc(100vh - 104px)); }
+@media (max-width: 700px) {
+  .aero-log-time, .aero-log-action { flex-basis: auto; }
+  .aero-log-entry { flex-wrap: wrap; gap: 5px 10px; }
+  .aero-log-detail { flex-basis: 100%; }
+  .pdf-preview-header { flex-wrap: wrap; }
+  .pdf-preview-name { flex-basis: 100%; }
+  .tray { min-width: 100px; gap: 5px; }
+}

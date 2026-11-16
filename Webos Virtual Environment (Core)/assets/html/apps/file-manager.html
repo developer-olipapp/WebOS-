@@ -1,0 +1,30 @@
+<div id="fm-window" role="application" aria-label="File Manager">
+  <div class="fm-title"><span class="fm-title-icon"></span><span class="fm-title-name">File Manager</span><button id="fm-minimize" type="button" aria-label="Kis méret">_</button><button id="fm-close" type="button" aria-label="Bezárás">×</button></div>
+  <div class="fm-toolbar">
+    <div class="fm-tool-group"><span class="fm-tool-label">Létrehozás és import</span>
+      <button class="fm-btn" id="fm-new-folder" type="button" disabled>＋ Új mappa</button>
+      <button class="fm-btn" id="fm-upload" type="button" disabled>↑ Fájlok hozzáadása</button>
+      <button class="fm-btn" id="fm-import-folder" type="button" disabled>▣ Mappa importálása</button>
+    </div>
+    <div class="fm-tool-group"><span class="fm-tool-label">Kijelölt elem</span>
+      <button class="fm-btn" id="fm-edit" type="button" disabled>Szerkesztés</button>
+      <button class="fm-btn" id="fm-preview" type="button" disabled>PDF előnézet</button>
+      <button class="fm-btn" id="fm-rename" type="button" disabled>Átnevezés</button>
+      <button class="fm-btn" id="fm-move" type="button" disabled>Áthelyezés</button>
+      <button class="fm-btn" id="fm-color" type="button" disabled>Mappaszín</button>
+      <button class="fm-btn" id="fm-vault" type="button" disabled>Vault</button>
+      <button class="fm-btn danger" id="fm-delete" type="button" disabled>Törlés</button>
+    </div>
+  </div>
+  <div class="fm-pathbar" id="fm-path">Content</div>
+  <div class="fm-workspace">
+    <section class="fm-pane fm-pane-tree"><div class="fm-pane-head">Mappák</div><div class="fm-tree" id="fm-tree"><div class="fm-empty-note">Nincs csatlakoztatott Content mappa.</div></div></section>
+    <section class="fm-pane fm-pane-list"><div class="fm-pane-head">Tartalom</div><div class="fm-list" id="fm-list"><div class="fm-empty-note">Válaszd ki a Content mappát.</div></div></section>
+    <div id="fm-empty">
+      <div class="fm-connect-card"><div class="fm-connect-icon">▣</div><strong>Content mappa csatlakoztatása</strong><button class="fm-btn" id="fm-connect" type="button">Csatlakozás</button></div>
+    </div>
+  </div>
+  <div class="fm-status"><span id="fm-status-text">Nincs csatlakoztatva</span><span id="fm-count"></span></div>
+  <input class="fm-hidden-input" id="fm-file-input" type="file" multiple>
+  <input class="fm-hidden-input" id="fm-folder-input" type="file" webkitdirectory directory multiple>
+</div>

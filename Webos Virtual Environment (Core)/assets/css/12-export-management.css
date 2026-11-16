@@ -1,0 +1,28 @@
+/* ------------------------- EXPORT MANAGEMENT ------------------------- */
+#export-management-window { display: none; flex-direction: column; }
+.export-title-mark { color: var(--violet); }
+.export-body { position: relative; flex: 1; min-height: 0; overflow: auto; padding: 25px; background: linear-gradient(145deg, rgba(7,17,34,.75), rgba(14,29,53,.69)); }
+.export-hero { max-width: 920px; padding: 26px 28px; }
+.export-panel {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 22px;
+  border: 1px solid rgba(138,198,241,.21);
+  border-radius: 17px;
+  background: rgba(13,29,52,.74);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 12px 30px rgba(0,0,0,.12);
+}
+.export-select-row { display: flex; align-items: flex-end; gap: 13px; flex-wrap: wrap; }
+.export-select-label { display: flex; flex: 1 1 460px; flex-direction: column; gap: 8px; color: var(--muted); font: 750 9px var(--font-mono); letter-spacing: .12em; }
+#export-folder-select { width: 100%; min-width: 0; height: 43px; padding: 8px 12px; }
+.export-actions { display:flex; gap:9px; flex:0 0 auto; }
+.export-actions button { min-width:142px; height:43px; padding:8px 16px; font-size:11px; }
+#export-run { min-width: 142px; height: 43px; padding: 8px 16px; font-size: 11px; }
+#export-word { color:#dff8ff; border:1px solid rgba(145,206,255,.3); border-radius:10px; background:rgba(25,53,82,.8); }
+#export-word:disabled { opacity:.38; cursor:not-allowed; }
+#export-word:hover:not(:disabled) { border-color:rgba(98,239,255,.65); background:rgba(39,89,119,.8); }
+#export-destination { margin-top: 17px; padding: 12px 14px; border: 1px solid rgba(145,206,255,.13); border-radius: 10px; color: var(--cyan-soft); background: rgba(3,12,27,.58); font: 10px/1.6 var(--font-mono); overflow-wrap: anywhere; }
+#export-status { min-height: 25px; margin-top: 12px; color: var(--text-soft); font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
+.export-connect-card { max-width: 480px; }
+
+@media(max-width:650px){.export-actions{width:100%}.export-actions button{flex:1;min-width:0}}

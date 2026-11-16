@@ -1,0 +1,31 @@
+<div id="event-studio-window" role="application" aria-label="Event Studio">
+  <div class="event-titlebar"><span class="event-title-mark">◷</span><span class="event-title-name">Event Studio <small>EVENT MANAGEMENT SYSTEM</small></span><button id="event-minimize" type="button" aria-label="Kis méret">_</button><button id="event-close" type="button" aria-label="Bezárás">×</button></div>
+  <div class="event-toolbar"><button class="event-back" id="event-back" type="button" hidden>← Vissza</button><span class="event-toolbar-title" id="event-toolbar-title">Eseménykezelő</span><span class="event-toolbar-note">WEBOS · EVENT ARCHIVE</span></div>
+  <div class="event-content" id="event-content">
+    <section class="event-page" id="event-home-page">
+      <div class="event-home-hero"><div class="event-home-kicker">WEBOS / CONTENT / EVENT / EVENT JSON</div><div class="event-home-title">Event Studio</div></div>
+      <div class="event-home-grid">
+        <button class="event-home-card" type="button" data-event-page="log"><span class="event-home-icon">＋</span><strong>Esemény naplózása</strong></button>
+        <button class="event-home-card" type="button" data-event-page="view"><span class="event-home-icon">▤</span><strong>Napló megtekintése</strong></button>
+        <button class="event-home-card" type="button" data-event-page="folders"><span class="event-home-icon">▰</span><strong>Mappaszerkezet kezelése</strong></button>
+      </div>
+    </section>
+    <section class="event-page" id="event-log-page" hidden>
+      <div class="event-page-top"><label for="event-log-folder">CÉLMAPPA KIVÁLASZTÁSA<select class="event-select" id="event-log-folder"><option value="">Válassz célmappát…</option></select></label><button class="event-action primary" id="event-log-new" type="button" disabled>＋ Naplózás</button></div>
+      <div class="event-list-heading"><strong>RÖGZÍTETT ESEMÉNYEK</strong><span id="event-log-count">0 esemény</span></div>
+      <div class="event-list" id="event-log-list"></div>
+    </section>
+    <section class="event-page" id="event-view-page" hidden>
+      <div class="event-page-top"><label for="event-view-folder">CÉLMAPPA KIVÁLASZTÁSA<select class="event-select" id="event-view-folder"><option value="">Válassz célmappát…</option></select></label></div>
+      <div class="event-list-heading"><strong>NAPLÓTARTALOM</strong><span id="event-view-count">0 esemény</span></div>
+      <div class="event-list" id="event-view-list"></div>
+    </section>
+    <section class="event-page" id="event-folders-page" hidden>
+      <div class="event-folder-create"><label class="event-date-field" for="event-folder-date">ÚJ CÉLMAPPA · DÁTUM VAGY NÉV<div class="event-date-input-wrap"><input class="event-input" id="event-folder-date" type="text" maxlength="120" placeholder="YYYY.MM.DD vagy pl. abcd" autocomplete="off"><button class="event-calendar-button" id="event-calendar-open" type="button" aria-label="Naptár megnyitása" title="Naptár megnyitása">▦</button></div></label><button class="event-action primary" id="event-create-folder" type="button">＋ Mappa létrehozása</button></div>
+      <div class="event-list-heading"><strong>CÉLMAPPÁK</strong><span id="event-folder-count">0 mappa</span></div>
+      <div class="event-folder-list" id="event-folder-list"></div>
+    </section>
+    <div id="event-disconnected" hidden><div class="event-connect-card"><div class="event-home-icon">▣</div><strong>Event Studio</strong><button class="event-action primary" id="event-connect" type="button">Csatlakozás</button></div></div>
+  </div>
+  <div class="event-status" id="event-status">Nincs csatlakoztatott tárhely: Content\Event\Event Json</div>
+</div>
