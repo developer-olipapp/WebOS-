@@ -1,0 +1,153 @@
+/* Shared titlebars, controls, buttons and fields. */
+.fm-title, .contact-titlebar, .searcher-titlebar, .event-titlebar,
+.export-titlebar, .mti-titlebar, .profile-titlebar,
+.event-entry-titlebar, .event-detail-titlebar, .event-calendar-titlebar {
+  position: relative;
+  min-height: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0 14px;
+  border: 0;
+  border-bottom: 1px solid rgba(131,205,255,.24);
+  color: #f5fbff;
+  background: linear-gradient(105deg, rgba(24, 53, 83, .98), rgba(18, 36, 69, .97) 52%, rgba(41, 32, 81, .94));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.11), 0 6px 22px rgba(0,0,0,.12);
+  font: 700 13px/1.2 var(--font-ui);
+  letter-spacing: .025em;
+}
+.fm-title::after, .contact-titlebar::after, .searcher-titlebar::after,
+.event-titlebar::after, .export-titlebar::after, .mti-titlebar::after,
+.profile-titlebar::after, .event-entry-titlebar::after,
+.event-detail-titlebar::after, .event-calendar-titlebar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(98,239,255,.7), rgba(168,139,255,.48), transparent);
+  pointer-events: none;
+}
+.fm-title-icon, .contact-title-mark, .searcher-title-mark, .event-title-mark,
+.export-title-mark, .mti-title-mark {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(145,225,255,.35);
+  border-radius: 9px;
+  color: var(--cyan-soft);
+  background: linear-gradient(145deg, rgba(74, 173, 206, .24), rgba(125, 103, 207, .24));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.13), 0 0 15px rgba(98,239,255,.07);
+  font-size: 16px;
+}
+.fm-title-name, .contact-title-name, .searcher-title-name, .event-title-name,
+.export-title-name, .mti-title-name, .profile-title-text { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.contact-title-sub, .searcher-title-name small, .event-title-name small,
+.export-title-name small, .mti-title-name small {
+  display: inline-block;
+  margin-left: 9px;
+  color: #a9cbe6;
+  font: 600 9px/1.2 var(--font-mono);
+  letter-spacing: .12em;
+}
+.fm-title button, .contact-titlebar button, .searcher-titlebar button,
+.event-titlebar button, .export-titlebar button, .mti-titlebar button,
+.profile-titlebar button, .event-entry-titlebar button,
+.event-detail-titlebar button, .event-calendar-titlebar button {
+  width: 31px;
+  height: 29px;
+  flex: 0 0 31px;
+  padding: 0;
+  border: 1px solid rgba(170,215,248,.24);
+  border-radius: 9px;
+  color: #d7ebfc;
+  background: rgba(7, 18, 38, .58);
+  font: 650 17px/1 var(--font-ui);
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.fm-title button:hover, .contact-titlebar button:hover, .searcher-titlebar button:hover,
+.event-titlebar button:hover, .export-titlebar button:hover, .mti-titlebar button:hover,
+.profile-titlebar button:hover, .event-entry-titlebar button:hover,
+.event-detail-titlebar button:hover, .event-calendar-titlebar button:hover {
+  color: #fff;
+  border-color: rgba(98,239,255,.65);
+  background: rgba(53, 131, 166, .48);
+  box-shadow: 0 0 15px rgba(98,239,255,.18);
+}
+.fm-title button:active, .contact-titlebar button:active, .searcher-titlebar button:active,
+.event-titlebar button:active, .export-titlebar button:active, .mti-titlebar button:active,
+.profile-titlebar button:active { transform: scale(.94); }
+.fm-btn, .contact-btn, .mti-button, .event-action, .event-back,
+.event-calendar-button, .profile-copy, .event-copy-button,
+#export-run, .server-gate-connect, .server-gate-skip {
+  min-height: 36px;
+  padding: 7px 13px;
+  border: 1px solid rgba(145,207,255,.22);
+  border-radius: 10px;
+  color: var(--text-soft);
+  background: linear-gradient(145deg, rgba(35, 61, 92, .76), rgba(15, 31, 56, .82));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.09), 0 4px 12px rgba(0,0,0,.12);
+  font: 650 11px/1.2 var(--font-ui);
+  letter-spacing: .015em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.fm-btn:hover:not(:disabled), .contact-btn:hover:not(:disabled), .mti-button:hover:not(:disabled),
+.event-action:hover:not(:disabled), .event-back:hover:not(:disabled), .event-calendar-button:hover,
+.profile-copy:hover:not(:disabled), .event-copy-button:hover:not(:disabled),
+#export-run:hover:not(:disabled), .server-gate-connect:hover, .server-gate-skip:hover {
+  color: #fff;
+  border-color: rgba(98,239,255,.6);
+  background: linear-gradient(135deg, rgba(39, 121, 151, .82), rgba(71, 77, 143, .83));
+  box-shadow: 0 0 18px rgba(66,191,229,.16), inset 0 1px 0 rgba(255,255,255,.16);
+  transform: translateY(-1px);
+}
+.fm-btn:active:not(:disabled), .contact-btn:active:not(:disabled), .mti-button:active:not(:disabled),
+.event-action:active:not(:disabled), .event-back:active:not(:disabled), .profile-copy:active:not(:disabled),
+.event-copy-button:active:not(:disabled), #export-run:active:not(:disabled), .server-gate-connect:active,
+.server-gate-skip:active { transform: translateY(1px) scale(.985); }
+.fm-btn:disabled, .contact-btn:disabled, .mti-button:disabled, .event-action:disabled,
+.profile-copy:disabled, .event-copy-button:disabled, #export-run:disabled {
+  opacity: .38;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.fm-btn.danger, .contact-btn.danger, .mti-button.delete-selected { color: #ff9aa9; border-color: rgba(255,110,137,.28); }
+.fm-btn.danger:hover:not(:disabled), .mti-button.delete-selected:hover:not(:disabled) { background: rgba(137,34,63,.6); border-color: rgba(255,110,137,.65); }
+.fm-btn.primary, .contact-btn.primary, .mti-button.primary, .event-action.primary,
+#export-run, .server-gate-connect {
+  color: #f5fdff;
+  border-color: rgba(98,239,255,.47);
+  background: linear-gradient(125deg, rgba(26, 137, 165, .88), rgba(62, 88, 171, .9) 57%, rgba(112, 73, 177, .87));
+  box-shadow: 0 0 17px rgba(68,190,226,.13), inset 0 1px 0 rgba(255,255,255,.18);
+  font-weight: 750;
+  letter-spacing: .035em;
+}
+.fm-btn.primary:hover:not(:disabled), .contact-btn.primary:hover:not(:disabled),
+.mti-button.primary:hover:not(:disabled), .event-action.primary:hover:not(:disabled),
+#export-run:hover:not(:disabled), .server-gate-connect:hover { box-shadow: 0 0 25px rgba(72,207,243,.28), inset 0 1px 0 rgba(255,255,255,.22); }
+input:not([type="checkbox"]):not([type="radio"]), select, textarea {
+  border: 1px solid rgba(127,189,235,.25);
+  border-radius: 10px;
+  color: #eaf6ff;
+  background: rgba(3, 12, 27, .7);
+  box-shadow: inset 0 2px 7px rgba(0,0,0,.24), 0 1px 0 rgba(255,255,255,.025);
+  outline: none;
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+input:not([type="checkbox"]):not([type="radio"]):focus, select:focus, textarea:focus {
+  border-color: rgba(98,239,255,.72);
+  background: rgba(5, 19, 39, .9);
+  box-shadow: 0 0 0 3px rgba(98,239,255,.09), 0 0 19px rgba(98,239,255,.08), inset 0 2px 7px rgba(0,0,0,.2);
+}
+input::placeholder, textarea::placeholder { color: #6f88a5; opacity: 1; }
+select option { color: var(--text); background: #0b1b35; }

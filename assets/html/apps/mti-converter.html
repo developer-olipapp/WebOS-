@@ -1,0 +1,27 @@
+<div id="mti-converter-window" role="application" aria-label="MTI Converter">
+  <div class="mti-titlebar"><span class="mti-title-mark">▧</span><span class="mti-title-name">WEBOS Converter · MTI CONVERT <small>JSON ARCHIVE / RECORD EDITOR</small></span><button class="converter-mode-back" id="mti-mode-back" type="button" title="Vissza a Converter kezdőlapjára">←</button><button id="mti-minimize" type="button" aria-label="Kis méret">_</button><button id="mti-close" type="button" aria-label="Bezárás">×</button></div>
+  <div class="mti-toolbar">
+    <button class="mti-button" id="mti-refresh" type="button">↻ Frissítés</button>
+    <span class="mti-toolbar-separator"></span>
+    <div class="mti-selection-tools">
+      <button class="mti-button" id="mti-select-mode" type="button" disabled aria-pressed="false">Szelektálás</button>
+      <button class="mti-button delete-selected" id="mti-delete-selected" type="button" disabled>Kijelölt sorok törlése</button>
+      <span class="mti-selection-hint" id="mti-selection-hint" hidden>Kattints a törlendő sorokra.</span>
+    </div>
+    <span class="mti-toolbar-spacer"></span>
+    <span class="mti-toolbar-note">JSON IMPORT · MTI COLLECT</span>
+    <div class="mti-export-actions"><button class="mti-button primary" id="mti-export-pdf" type="button" disabled>PDF EXPORT</button><button class="mti-button primary" id="mti-export-docx" type="button" disabled>WORD EXPORT</button></div>
+  </div>
+  <div class="mti-workspace">
+    <aside class="mti-file-pane">
+      <div class="mti-pane-heading"><strong>JSON IMPORT</strong><span id="mti-file-count">0 fájl</span></div>
+      <div class="mti-file-list" id="mti-file-list"><div class="mti-empty">A JSON-fájlok betöltése folyamatban.</div></div>
+    </aside>
+    <section class="mti-record-pane">
+      <div class="mti-record-heading"><div><strong id="mti-current-file">Nincs kiválasztott fájl</strong><span id="mti-record-summary">Válassz egy JSON-fájlt a bal oldali listából.</span><span class="mti-folder-path">Content\MTI Collect\JSON IMPORT</span></div><span id="mti-record-count">—</span></div>
+      <div class="mti-table-wrap" id="mti-table-wrap"><div class="mti-empty large">A kiválasztott JSON tartalma itt jelenik meg áttekinthető sorokban.</div></div>
+    </section>
+  </div>
+  <div class="mti-status"><span id="mti-status-text">Content\MTI Collect · Nincs csatlakoztatva</span><span id="mti-status-path">MTI CONVERTER</span></div>
+  <div id="mti-disconnected" hidden><div class="mti-connect-card"><div class="mti-connect-icon">▣</div><strong>MTI Collect</strong><button class="mti-button primary" id="mti-connect" type="button">Csatlakozás</button></div></div>
+</div>

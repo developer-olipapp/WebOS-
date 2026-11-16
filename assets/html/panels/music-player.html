@@ -1,0 +1,12 @@
+<aside id="music-panel" class="music-panel" hidden aria-hidden="true" aria-label="Music Player">
+  <header class="music-panel-header"><div class="music-panel-brand"><span class="music-panel-symbol">♫</span><div><strong>Music</strong><small>PERSONAL AUDIO LIBRARY</small></div></div><button id="music-panel-close" type="button" aria-label="Bezárás">×</button></header>
+  <div class="music-now-card"><div class="music-now-art"><span>♫</span><i></i></div><div class="music-now-meta"><small>NOW PLAYING</small><strong id="music-now-title">Nincs lejátszott zene</strong><span id="music-now-folder">Content\Music</span></div></div>
+  <div class="music-library-head"><div><strong>Zenetár</strong><small id="music-library-count">0 zeneszám</small></div><button id="music-refresh" type="button" title="Frissítés">↻ Frissítés</button></div>
+  <div class="music-breadcrumb"><button id="music-back" type="button" disabled>‹</button><span id="music-path">Music</span></div>
+  <div id="music-items" class="music-items"><div class="music-empty"><span>♫</span><strong>A Music mappa még üres</strong><small>Nincs zeneszám.</small></div></div>
+  <div class="music-player-controls">
+    <div class="music-timeline"><span id="music-current-time">0:00</span><input id="music-seek" type="range" min="0" max="1000" value="0" aria-label="Lejátszás pozíciója"><span id="music-duration">0:00</span></div>
+    <div class="music-control-row"><button id="music-prev" type="button" title="Előző">⏮</button><button id="music-play" class="music-play-button" type="button" title="Lejátszás">▶</button><button id="music-next" type="button" title="Következő">⏭</button><div class="music-volume"><span>◖</span><input id="music-volume" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Hangerő"></div></div>
+    <div id="music-player-status" class="music-player-status" role="status">Content mappa csatlakoztatása után használható.</div>
+  </div>
+</aside>

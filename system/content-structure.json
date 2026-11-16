@@ -1,0 +1,79 @@
+{
+  "format": "WEBOS-CONTENT-STRUCTURE",
+  "version": 1,
+  "root": "Content",
+  "icons": {
+    "Contact": "👥",
+    "Event": "🗓️",
+    "MTI Collect": "📰",
+    "Recycle Bin": "♻️",
+    "Music": "♫"
+  },
+  "folders": [
+    {
+      "name": "Contact",
+      "path": "Contact",
+      "kind": "system"
+    },
+    {
+      "name": "Event",
+      "path": "Event",
+      "kind": "system",
+      "children": [
+        {
+          "name": "Event Json",
+          "path": "Event/Event Json"
+        },
+        {
+          "name": "Event Export",
+          "path": "Event/Event Export",
+          "children": [
+            {
+              "name": "Word",
+              "path": "Event/Event Export/Word"
+            },
+            {
+              "name": "PDF",
+              "path": "Event/Event Export/PDF"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MTI Collect",
+      "path": "MTI Collect",
+      "kind": "system",
+      "children": [
+        {
+          "name": "JSON IMPORT",
+          "path": "MTI Collect/JSON IMPORT"
+        },
+        {
+          "name": "EXPORT",
+          "path": "MTI Collect/EXPORT",
+          "children": [
+            {
+              "name": "PDF",
+              "path": "MTI Collect/EXPORT/PDF"
+            },
+            {
+              "name": "Word",
+              "path": "MTI Collect/EXPORT/Word"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Music",
+      "path": "Music",
+      "kind": "system"
+    },
+    {
+      "name": "Recycle Bin",
+      "path": "Recycle Bin",
+      "kind": "system"
+    }
+  ]
+}

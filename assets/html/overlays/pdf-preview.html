@@ -1,0 +1,6 @@
+<div id="pdf-preview-overlay" class="pdf-preview-overlay" aria-hidden="true">
+  <section class="pdf-preview-window" role="dialog" aria-modal="true" aria-label="PDF dokumentum előnézete">
+    <div class="pdf-preview-header"><span class="pdf-preview-name" id="pdf-preview-name">PDF előnézet</span><button id="pdf-page-prev" type="button" title="Előző oldal">‹</button><span style="color:var(--muted);font:10px var(--font-mono)">OLDAL</span><input class="pdf-preview-page" id="pdf-page-input" type="number" min="1" max="99999" value="1" aria-label="Oldalszám"><button id="pdf-page-next" type="button" title="Következő oldal">›</button><button id="pdf-zoom-out" type="button" title="Kicsinyítés">−</button><span id="pdf-zoom-label" style="min-width:42px;text-align:center;color:var(--cyan-soft);font:10px var(--font-mono)">100%</span><button id="pdf-zoom-in" type="button" title="Nagyítás">＋</button><button id="pdf-preview-external" type="button">Külön megnyitás</button><button id="pdf-preview-close" type="button" aria-label="Bezárás">×</button></div>
+    <iframe id="pdf-preview-frame" title="PDF dokumentum"></iframe>
+  </section>
+</div>

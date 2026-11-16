@@ -1,0 +1,62 @@
+/* ---------------------- CONTACT PROFILE WINDOWS ---------------------- */
+.profile-window {
+  position: fixed;
+  left: 50%;
+  top: calc((100vh - 78px) / 2);
+  z-index: 11000;
+  display: flex;
+  flex-direction: column;
+  width: min(690px, calc(100vw - 28px));
+  height: min(720px, calc(100vh - 96px));
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(139,207,255,.3);
+  border-radius: var(--radius-xl);
+  color: var(--text);
+  background: linear-gradient(145deg, rgba(13,27,50,.97), rgba(6,15,32,.96));
+  box-shadow: var(--shadow-deep), inset 0 1px 0 rgba(255,255,255,.09), var(--shadow-glow);
+  backdrop-filter: blur(24px) saturate(150%);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.profile-titlebar { height: 48px; flex: 0 0 48px; }
+.profile-hero {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 145px;
+  padding: 20px 23px;
+  border-bottom: 1px solid rgba(145,206,255,.17);
+  background: radial-gradient(ellipse at 20% 20%, rgba(98,239,255,.12), transparent 50%), linear-gradient(110deg, rgba(32,69,103,.56), rgba(47,39,91,.47));
+}
+.profile-photo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  flex: 0 0 88px;
+  overflow: hidden;
+  border: 1px solid rgba(145,225,255,.52);
+  border-radius: 23px;
+  background: linear-gradient(145deg, rgba(44,139,168,.43), rgba(106,78,175,.43));
+  box-shadow: 0 0 24px rgba(98,239,255,.13), inset 0 1px 0 rgba(255,255,255,.15);
+}
+.profile-photo { display: none; width: 100%; height: 100%; object-fit: cover; }
+.profile-photo-fallback { color: #e8faff; font-size: 25px; font-weight: 800; }
+.profile-hero-copy { min-width: 0; }
+.profile-kicker { margin-bottom: 7px; color: var(--cyan); font: 700 9px var(--font-mono); letter-spacing: .17em; }
+.profile-person-name { color: #f4fbff; font-size: clamp(19px,3vw,27px); font-weight: 800; overflow-wrap: anywhere; }
+.profile-details { flex: 1; min-height: 0; overflow: auto; padding: 14px 18px; background: rgba(4,13,28,.52); }
+.profile-data-row {
+  display: grid;
+  grid-template-columns: 125px minmax(0,1fr) auto;
+  align-items: center;
+  gap: 11px;
+  min-height: 48px;
+  padding: 7px 6px;
+  border-bottom: 1px solid rgba(145,206,255,.12);
+}
+.profile-data-label { color: var(--muted); font-size: 10px; font-weight: 750; letter-spacing: .04em; }
+.profile-data-value { min-width: 0; color: var(--text); font-size: 12px; overflow-wrap: anywhere; }
+.profile-copy { min-width: 83px; min-height: 30px; padding: 5px 9px; }
+.profile-status { margin-top: auto; }
